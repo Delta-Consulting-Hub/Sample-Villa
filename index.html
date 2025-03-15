@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <!-- Business Name -->
+    <header>
+        <h1>Real Estate Hub</h1>
+        <div class="divider"></div>
+    </header>
+
+    <!-- Project Section with 3D Model on Left, Text on Right -->
+    <section class="project">
+        <div class="project-container">
+            <!-- 3D Model -->
+            <div class="model-container">
+                <model-viewer 
+               src="./home.glb" 
+               alt="3D Model"
+               auto-rotate
+               camera-controls
+               ar
+               loading="lazy"
+               style="width: 100%; max-width: 400px; height: 400px;">
+                </model-viewer>
+
+            </div>
+             
+
+            <!-- Project Details -->
+            <div class="project-details">
+                <h2>The Kohinoor Villa</h2>
+                <p><strong>Location:</strong> Pimpri, Pune City</p>
+                <p><strong>Price:</strong>₹1.5 Crores</p>
+                <p><strong>Area:</strong> 1200 - 2500 sq. ft.</p>
+                <p><strong>Type:</strong> Residential Apartment</p>
+                <p><strong>Key Features:</strong> Gated Community, Smart Security, Gym, Pool, Green Park</p>
+            
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button class="full-button" id="fullscreen-btn">Full-Screen View</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer (Contact Below About Us) -->
+    <footer>
+        <div class="footer-content">
+            <div class="about">
+                <h3>About Us</h3>
+                <p>We provide premium real estate services.</p>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@business.com</p>
+                <p>Phone: +91 XXXXXXXXXX</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+}
+
+/* Project Section - Model on Left, Text on Right */
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.model-container {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Ensure the model maintains a square aspect ratio */
+model-viewer {
+    flex: 1;
+    max-width: 600px;
+    height: 400px;
+}
+
+/* Project details styling */
+.project-details {
+    flex: 1;
+    text-align: left;
+    max-width: 400px;
+    padding-left: 20px;
+}
+
+/* Buttons Styling */
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 5px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#fullscreen-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    display: block;
+}
+
+#fullscreen-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* Footer - Stacked Layout */
+.footer-content {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.about, .contact {
+    margin-bottom: 20px;
+}
+
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .model-container {
+        width: 90%;
+        max-width: 100%;
+        padding: 10px;
+        aspect-ratio: 1/1; /* ✅ Ensures height = width */
+    }
+
+    model-viewer {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 1/1; /* ✅ Makes model square */
+    }
+
+    .project-details {
+        width: 90%;
+        max-width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+
+    .buttons {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        width: auto;
+    }
+
+    h2 {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
