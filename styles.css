@@ -39,6 +39,8 @@ header {
     padding: 10px;
     border: 2px solid black;
     border-radius: 10px;
+    max-height: 400px;
+    height: 400px;
 }
 
 /* Ensure the model maintains a square aspect ratio */
@@ -114,6 +116,8 @@ button {
         max-width: 100%;
         padding: 10px;
         aspect-ratio: 1/1; /* ✅ Ensures height = width */
+        height: 90%;
+        max-height: 100%;
     }
 
     model-viewer {
